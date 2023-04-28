@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "capable-epigram-385107",
+  "private_key_id": "6b96dfb8ac7bdcf1dccbb91a517f3a6f254caefe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqzs5xZ60yRYaP\n9RCBynuTxdMJFrC1zrHU/Pi1LHKBc3J4SoKFy6Bsp8Ubz7rGEs9MLOg9SYH4vX1c\nzQszAu9AwMfm2mi82fCab3o8xpuoygyND+mfqi5n3v9Hw2dPe8TNCb1mQE+OSNcV\nnM21P/gpVjzWwH1AldPXhfoom9cQZquVZPeqGIZvD71/oBijjok2ItT+7a/LWMh2\nZgXXd43+N0IguCmm+n2/pV9kwUhfQPeujY0I22NubXOMsPL6FPNV8uRgtyr4F74x\nDcFz1zv9xscfN3vydL69/s+iBc4HoKC/DWBTRwFlsSicsRjBmEA26gitdx0fBOog\nt2CQMYifAgMBAAECggEALeXdho639SLGmmddVKse0uIdJ7uPp4MPuS5y/GghqtRl\nZZqMATzq8leQuTz0MOZ8CrmkfFeE09zDU40Lnd0DgnBrJwb4jwq3QyCChdNOn6gP\ngFZOzmcyChpbmaKR38Nf6kLcQJ42YoMDPN0CT9qNKjpwpbpazeCU6LypMIFT5KVp\nv81zYTS3o8hgmdemfty67Q3/HhelvPDT1uYvijsfeP12JfSEP8/qb4aMmWGgPW69\n88ISqftL8MoMxiElqAr9vtooq5+ZMD0D6OMaWxtPbwfhXWEXRZfiJU4JeFOo8Sl3\nXpoJ0qpbizgGKFLvqVlmS8YvTm/N1W6VosLyQc9KRQKBgQDUYpN48WdWhFvulgtx\n/8S2yFY+r4WeoPFLOaqiqZjw4fAFgOxyJqAs3q3SeXizSB+Te3yxwQ8YTNpoZ+BX\nAU/jowCgt7FREwwx/Jd/1+KPMaPtQ+sEXJHfAcrOCjxh1HoA+j4nQscZa2q3gyg0\n6Yq725Bx7qZpyp32LZKswNhgAwKBgQDN4nLmybpTZq3XtDhB6+jJ1WHTlrSgopfq\nF7a1HBTa0UT5bdwJ5B3H+r+J1poHu9yMAE2T7QYOd8jwDyYh3CqgKRpKfuYMIt35\nA6AchdfIVRcBSojoq/VETEKPkYFJiDxqDextq4vcEEpGJy0XJ5cEsTntM3xgP6Fa\nfLm9j3c4NQKBgQDLCE2IseYjDDdCVwgr++FXBx+Dn5HyOlNRoZghFlaR+LvW1w+y\ndIBtRJcQ/XTIluswtz1WRIQkq9ujMaKCKkvwBrSj79c/9SCUbK971KrOTxsxx9rU\n+ZWthe4VmC1vLItRgeiG6cyh3VFQi76VDqnEurpUYFuQCNWHMLvmEBkJdwKBgHL7\nagJcXTQg3yvdmaGvV+YIxsa9nwkrZT42mjKRiVAfma7X3RClFsDN2FTpxkJVd7m0\nnZ7kvAIugckYHMrCRAgIjIdYUbArdN6SWMQ1N6rJYry03Ltc9fB7ypyVvafMbzkn\np4gkS0rOyjxdur/4u03CkMBZhbfXMYzwpWcpjYKVAoGBAMcNMgQgm4heXwsTEVRk\nzX1ZRjTJjLaWHug0SC8fjqRJ9mx+hOZNvHOZraMYvODF13a5J3Uz3WKAiuERAV5d\nfifi7T3MdElGZt26W/TH6l5OI5FEnWqZUuonta76bS3pWM2YHNiG78CI69YBAqTk\nnwrJWoIIs6y4nCRddO9tQqGw\n-----END PRIVATE KEY-----\n",
+  "client_email": "writer-account@capable-epigram-385107.iam.gserviceaccount.com",
+  "client_id": "100369757536701637247",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/writer-account%40capable-epigram-385107.iam.gserviceaccount.com"
+}
