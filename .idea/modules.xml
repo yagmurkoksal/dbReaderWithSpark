@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dbReaderWithScala.iml" filepath="$PROJECT_DIR$/.idea/modules/dbReaderWithScala.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dbReaderWithScala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/dbReaderWithScala-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" filepath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dbReaderWithSpark-build.iml" filepath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark-build.iml" />
     </modules>
   </component>
 </project>

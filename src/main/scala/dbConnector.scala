@@ -1,10 +1,16 @@
+import com.google.auth.oauth2.GoogleCredentials
 import com.google.protobuf.ByteString.Output
 import org.apache.spark.sql.SparkSession
 import com.typesafe.config.{Config, ConfigFactory}
 import org.sparkproject.jetty.util.security.Password
+import org.apache.log4j.{Level, Logger}
 
-import java.io.{File, PrintWriter, StringWriter}
+import java.io.File
+import java.io.PrintWriter
+import java.lang.System.console
 import java.time.LocalDateTime
+import scala.reflect.internal.Reporter.ERROR
+import scala.util.Using.resources
 
 object dbConnector {
   var query: String = null;
@@ -14,24 +20,23 @@ object dbConnector {
   var user: String =null
   var password:String=null
   var output:String=null
-  val errorOutput = new StringWriter
+  var mod:String=null
 
   def main(args: Array[String]): Unit = {
 
     setDB("mysql")
-    Connector(query, driver, url, user,password,output,"mysql")
+    Connector(query, driver, url, user,password,output,"mysql",mod)
     //Starting to postgres
     setDB("postgres")
-    Connector(query, driver, url, user,password,output,"postgres")
+    Connector(query, driver, url, user,password,output,"postgres",mod)
 
-
-    def Connector(query: String, driver: String, url: String, user: String, password: String,output: String,db:String) {
+    def Connector(query: String, driver: String, url: String, user: String, password: String,output: String,db:String,mod:String) {
 
       val spark = SparkSession.builder().master("local[*]")
         .appName("dbReader")
         .getOrCreate()
+      spark.sparkContext.setLogLevel("ERROR")
 
-      try{
       val df = spark.read
         .format("jdbc")
         .option("query", query)
@@ -41,14 +46,11 @@ object dbConnector {
         .option("password", password)
         .load()
       val tim=LocalDateTime.now()
-     df.repartition(1).write.json(output+"/"+db+tim+".json")
-    }catch {
-        case d: Throwable => d.printStackTrace(new PrintWriter(errorOutput))
-          new PrintWriter(s"src/main/errors/error"+LocalDateTime.now()+".txt") //Saves error message to this location
-          {
-            write(errorOutput.toString);
-            close
-          }}}
+     //df.repartition(1).write.json(output+"/"+db+tim+".json")
+
+     df.write.mode(mod).json("gs:/mysqlandpostgres/")
+
+    }
 
     def setDB(db: String): Unit = {
       val config = ConfigFactory.load("application.conf").getConfig("com.dbs.sca")
@@ -58,6 +60,7 @@ object dbConnector {
       driver = dbConfig.getString("driver")
       url = dbConfig.getString("url")
       output=dbConfig.getString("output_path")
+      mod=dbConfig.getString("mod")
 
       val loginPath = dbConfig.getString("login_path")
       val parsedLoginConfig = ConfigFactory.parseFile(new File(loginPath))

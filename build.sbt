@@ -13,7 +13,8 @@ libraryDependencies ++= Seq(
   "org.postgresql" % "postgresql" % "42.5.4",
   "com.google.cloud" % "google-cloud-storage" % "2.22.1",
   "org.apache.spark" %% "spark-sql" % "3.4.0",
-  "org.apache.spark" %% "spark-core" % "3.4.0"
+  "org.apache.spark" %% "spark-core" % "3.4.0",
+  "com.google.cloud" % "google-cloud-storage" % "2.22.1"
 
 
 )

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="" />
+    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/application.conf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +45,9 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,12 +55,14 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2P3ezPseFdfHIisjFpl4M9yS1OC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/yag/Documents/İş Dışı/dbReaderWithSpark/src/resources",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Scala"
   }
@@ -63,7 +78,7 @@
   <component name="RunManager">
     <configuration name="dbConnector" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="dbConnector" />
-      <module name="dbReaderWithScala" />
+      <module name="dbReaderWithSpark" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,5 +102,16 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
