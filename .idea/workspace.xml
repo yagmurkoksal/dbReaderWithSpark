@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="formatted">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_grpc_google_cloud_bigquerystorage_v1_2_36_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_grpc_google_cloud_bigquerystorage_v1beta1_0_160_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_grpc_google_cloud_bigquerystorage_v1beta2_0_160_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_cloud_bigquerystorage_v1_2_36_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_cloud_bigquerystorage_v1beta1_0_160_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_cloud_bigquerystorage_v1beta2_0_160_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_bigquery_v2_rev20230408_2_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auto_value_auto_value_1_10_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_bigquery_2_25_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_bigquerystorage_2_36_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__commons_logging_commons_logging_1_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_httpcomponents_httpclient_4_5_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_httpcomponents_httpcore_4_4_16_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_checkerframework_checker_compat_qual_2_5_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_json_json_20230227_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_threeten_threeten_extra_1_7_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/writeToGcsAndBigQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_4_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_2_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__commons_logging_commons_logging_1_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_threeten_threeten_extra_1_7_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" afterDir="false" />
+    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="big query added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/writeToGcs.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/application.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682740507021</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="big query added">
+      <created>1682750012101</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682750012101</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -158,17 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="conf settings" />
     <MESSAGE value="formatted" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatted" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/writeToGcsAndBigQuery.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="big query added" />
+    <option name="LAST_COMMIT_MESSAGE" value="big query added" />
   </component>
 </project>

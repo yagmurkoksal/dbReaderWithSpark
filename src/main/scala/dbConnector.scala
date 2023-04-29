@@ -1,7 +1,8 @@
 import com.typesafe.config.{Config, ConfigFactory}
 import org.apache.spark.sql.SparkSession
 
-import java.io.File
+import java.io.{File, FileNotFoundException}
+import scala.util.Failure
 
 object dbConnector {
   var query: String = null;
@@ -63,7 +64,19 @@ object dbConnector {
       gcsBigquery = dbConfig.getString("gcsBigquery")
 
       val loginPath = dbConfig.getString("login_path")
-      val parsedLoginConfig = ConfigFactory.parseFile(new File(loginPath))
+      var parsedLoginConfig: Config = null
+      try {
+        parsedLoginConfig = ConfigFactory.parseFile(new File(loginPath))
+      } catch {
+        case e: FileNotFoundException => {
+          println(s"File $loginPath not found")
+          Failure(e)
+        }
+        case unknown: Exception => {
+          println(s"Unknown exception: $unknown")
+          Failure(unknown)
+        }
+      }
 
       val loginInfo = ConfigFactory.load(parsedLoginConfig).getConfig("com.login.sca")
       login = loginInfo.getConfig(db)
