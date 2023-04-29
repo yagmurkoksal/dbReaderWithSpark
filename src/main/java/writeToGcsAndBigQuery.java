@@ -1,6 +1,6 @@
-
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
+import com.google.cloud.bigquery.*;
 import com.google.cloud.storage.BlobId;
 import com.google.cloud.storage.BlobInfo;
 import com.google.cloud.storage.Storage;
@@ -14,26 +14,14 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.LocalTime;
 
-import com.google.cloud.bigquery.BigQuery;
-import com.google.cloud.bigquery.BigQueryException;
-import com.google.cloud.bigquery.BigQueryOptions;
-import com.google.cloud.bigquery.Field;
-import com.google.cloud.bigquery.FormatOptions;
-import com.google.cloud.bigquery.Job;
-import com.google.cloud.bigquery.JobInfo;
-import com.google.cloud.bigquery.LoadJobConfiguration;
-import com.google.cloud.bigquery.Schema;
-import com.google.cloud.bigquery.StandardSQLTypeName;
-import com.google.cloud.bigquery.TableId;
-
 public class writeToGcsAndBigQuery {
     String projectId = "capable-epigram-385107";
     String cred = "src/resources/capable-epigram-385107-6b96dfb8ac7b.json";
 
-    public void write(String fileName, String filePath, String db, String query) throws IOException {
+    public void write(String fileName, String filePath, String db, String query) throws IOException, InterruptedException {
         String bucketName = "mysqlandpostgres";
-        LocalTime ltime = LocalTime.now();
-        String objectName = db + "/" + ltime + fileName;
+        LocalTime lTime = LocalTime.now();
+        String objectName = db + "/" + lTime + fileName;
 
         Storage storage = StorageOptions.newBuilder().setProjectId(projectId).setCredentials(GoogleCredentials.fromStream(new
                 FileInputStream(cred))).build().getService();
@@ -58,7 +46,7 @@ public class writeToGcsAndBigQuery {
     }
 
     public void loadJsonFromGCS(
-            String datasetName, String tableName, String sourceUri) {
+            String datasetName, String tableName, String sourceUri) throws InterruptedException {
         try {
             BigQuery bigquery = BigQueryOptions.newBuilder().setProjectId(projectId)
                     .setCredentials(
@@ -82,8 +70,9 @@ public class writeToGcsAndBigQuery {
                         "BigQuery was unable to load into the table due to an error:"
                                 + job.getStatus().getError());
             }
-        } catch (BigQueryException | InterruptedException e) {
-            System.out.println("Column not added during load append \n" + e.toString());
+        } catch (BigQueryException b) {
+            System.out.println("Column not added during load append \n" + b.toString());
+            throw b;
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
