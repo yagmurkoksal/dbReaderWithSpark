@@ -1,16 +1,7 @@
-import com.google.auth.oauth2.GoogleCredentials
-import com.google.protobuf.ByteString.Output
-import org.apache.spark.sql.SparkSession
 import com.typesafe.config.{Config, ConfigFactory}
-import org.sparkproject.jetty.util.security.Password
-import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.SparkSession
 
 import java.io.File
-import java.io.PrintWriter
-import java.lang.System.console
-import java.time.LocalDateTime
-import scala.reflect.internal.Reporter.ERROR
-import scala.util.Using.resources
 
 object dbConnector {
   var query: String = null;
@@ -21,18 +12,18 @@ object dbConnector {
   var password: String = null
   var output: String = null
   var mod: String = null
-  var gcs: String = null
+  var gcsBigquery: String = null
   var bigquery: String = null
 
   def main(args: Array[String]): Unit = {
 
     setDB("mysql")
-    Connector(query, driver, url, user, password, output, "mysql", mod, gcs, bigquery)
+    Connector(query, driver, url, user, password, output, "mysql", mod, gcsBigquery, bigquery)
     //Starting to postgres
     setDB("postgres")
-    Connector(query, driver, url, user, password, output, "postgres", mod, gcs, bigquery)
+    Connector(query, driver, url, user, password, output, "postgres", mod, gcsBigquery, bigquery)
 
-    def Connector(query: String, driver: String, url: String, user: String, password: String, output: String, db: String, mod: String, gcs: String, bigquery: String) {
+    def Connector(query: String, driver: String, url: String, user: String, password: String, output: String, db: String, mod: String, gcsBigquery: String, bigquery: String) {
 
       val spark = SparkSession.builder().master("local[*]")
         .appName("dbReader")
@@ -48,19 +39,14 @@ object dbConnector {
         .option("password", password)
         .load()
 
-      val fileName = output + "/" + db + "_" + query.filterNot(_.isWhitespace) + ".json"
-      println(fileName)
-      df.repartition(1).write.mode(mod).json(fileName)
-      val gcsResult = gcs.toLowerCase()
-      val bigqueryResult = bigquery.toLowerCase()
+      val fileName = db + "_" + query.filterNot(_.isWhitespace) + ".json"
+      val filePath = output + fileName
+      df.repartition(1).write.mode(mod).json(filePath)
+      val gcsBigqueryResult = gcsBigquery.toLowerCase()
 
-      if (gcsResult.equals("yes")) {
-        val wg = writeToGcs
-        wg.gcs(fileName)
-      }
-      if (bigqueryResult.equals("yes")) {
-        val wg = writeToGcs
-        wg.big(fileName)
+      if (gcsBigqueryResult.equals("True")) {
+        val wgb = new writeToGcsAndBigQuery()
+        wgb.write(fileName, filePath, db, query)
       }
 
     }
@@ -74,8 +60,7 @@ object dbConnector {
       url = dbConfig.getString("url")
       output = dbConfig.getString("output_path")
       mod = dbConfig.getString("mod")
-      gcs = dbConfig.getString("gcs")
-      bigquery = dbConfig.getString("bigquery")
+      gcsBigquery = dbConfig.getString("gcsBigquery")
 
       val loginPath = dbConfig.getString("login_path")
       val parsedLoginConfig = ConfigFactory.parseFile(new File(loginPath))
