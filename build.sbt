@@ -7,6 +7,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "dbReaderWithSpark"
   )
+
 libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "8.0.33",
   "com.typesafe" % "config" % "1.4.2",

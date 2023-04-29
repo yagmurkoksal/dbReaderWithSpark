@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark-build.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="conf settings">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/writeToGcs.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/mysql2023-04-28T20:25:35.987083.json/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/mysql2023-04-28T20:25:35.987083.json/.part-00000-6752b661-33a6-439a-83e0-49f3d2d771df-c000.json.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/mysql2023-04-28T20:25:35.987083.json/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/mysql2023-04-28T20:25:35.987083.json/part-00000-6752b661-33a6-439a-83e0-49f3d2d771df-c000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/postgres2023-04-28T20:25:39.272664.json/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/postgres2023-04-28T20:25:39.272664.json/.part-00000-886b617a-3ede-4195-a527-93950f6b56bb-c000.json.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/postgres2023-04-28T20:25:39.272664.json/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/output/postgres2023-04-28T20:25:39.272664.json/part-00000-886b617a-3ede-4195-a527-93950f6b56bb-c000.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/application.conf" afterDir="false" />
     </list>
@@ -44,6 +48,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,6 +109,14 @@
       <option name="presentableId" value="Default" />
       <updated>1682690456513</updated>
     </task>
+    <task id="LOCAL-00001" summary="conf settings">
+      <created>1682705299513</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682705299513</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -113,5 +132,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="conf settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="conf settings" />
   </component>
 </project>
