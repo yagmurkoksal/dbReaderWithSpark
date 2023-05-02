@@ -46,7 +46,7 @@ object dbConnector {
     df.repartition(1).write.mode(mod).json(filePath)
     val gcsBigqueryResult = gcsBigquery.toLowerCase()
 
-    if (gcsBigqueryResult.equals("True")) {
+    if (gcsBigqueryResult.equals("true")) {
       val wgb = new writeToGcsAndBigQuery()
       wgb.write(fileName, filePath, db, query)
     }
