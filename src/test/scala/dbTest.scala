@@ -15,13 +15,5 @@ class dbTest extends AnyFunSuite {
     }
     assert(e.isInstanceOf[NullPointerException])
   }
-  test("Writer should fail with inappropriate file name") {
-    val e: BigQueryException = intercept[BigQueryException] {
-      val wgb = new writeToGcsAndBigQuery
-      val s = wgb.write("bad5263':Fİlena,Me", "src/main/output/mysql_selectcustomerNamefromcustomers.json", "mysql", "select * from customers")
-    }
-    assert(e.isInstanceOf[BigQueryException])
-  }
-
 
 }

@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="error handling added">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_compatible_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_core_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_diagrams_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_featurespec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_flatspec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_freespec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_funspec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_funsuite_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_matchers_core_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_mustmatchers_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_propspec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_refspec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_shouldmatchers_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_wordspec_2_13_3_2_15_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/dbTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/dbReaderWithSpark.iml" afterDir="false" />
+    <list default="true" id="f562ec04-8be7-4cfe-83fb-67e42c872588" name="Changes" comment="unit test added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/writeToGcsAndBigQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/writeToGcsAndBigQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/dbConnector.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,13 +61,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/yag/Documents/İş Dışı/dbReaderWithSpark/src/resources",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Scala"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yag/Documents/İş Dışı/dbReaderWithSpark/src/resources&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Scala&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/resources" />
@@ -96,7 +76,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.dbConnector">
+  <component name="RunManager" selected="ScalaTest.dbTest.Writer should fail with inappropriate file name">
     <configuration name="dbConnector" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="dbConnector" />
       <module name="dbReaderWithSpark" />
@@ -161,9 +141,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.dbTest.Writer should fail with inappropriate file name" />
         <item itemvalue="Application.dbConnector" />
         <item itemvalue="ScalaTest.dbTest" />
-        <item itemvalue="ScalaTest.dbTest.Writer should fail with inappropriate file name" />
         <item itemvalue="ScalaTest.dbTest.Connector should fail with null parameters" />
         <item itemvalue="ScalaTest.dbTest.setdb should fail with nonexistentdb" />
       </list>
@@ -206,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682750692370</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="unit test added">
+      <created>1682757717791</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682757717792</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -228,6 +215,23 @@
     <MESSAGE value="formatted" />
     <MESSAGE value="big query added" />
     <MESSAGE value="error handling added" />
-    <option name="LAST_COMMIT_MESSAGE" value="error handling added" />
+    <MESSAGE value="unit test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit test added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/test/scala/dbTest.scala</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/test/scala/dbTest.scala</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

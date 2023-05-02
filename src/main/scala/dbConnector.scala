@@ -1,6 +1,5 @@
 import com.typesafe.config.{Config, ConfigFactory}
 import org.apache.spark.sql.SparkSession
-import sun.jvm.hotspot.HelloWorld.e
 
 import java.io.{File, FileNotFoundException, IOException}
 import scala.util.Failure
